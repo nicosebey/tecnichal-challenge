@@ -12,7 +12,7 @@ public class MfrMockResponse {
         List<MfrDto> manufacturerDtos = new ArrayList<>();
 
         MfrDto mockManufacturer = new MfrDto();
-        mockManufacturer.setCountry("CHILE");
+        mockManufacturer.setCountry("UNITED STATES (USA)");
         mockManufacturer.setCommonName("FORD");
         mockManufacturer.setId(1);
         mockManufacturer.setName("FORD SIERRA");
@@ -32,7 +32,7 @@ public class MfrMockResponse {
         List<MfrDto> mfrs = new ArrayList<>();
 
         MfrDto mockMfrs = new MfrDto();
-        mockMfrs.setCountry("CHILE");
+        mockMfrs.setCountry("UNITED STATES (USA)");
         mockMfrs.setCommonName("TOYOTA");
         mockMfrs.setId(2);
         mockMfrs.setName("YARIS");

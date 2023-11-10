@@ -32,7 +32,7 @@ public class MfrController {
 
     @GetMapping(value = "/country",produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Object> getMfrByCountry(@RequestParam(value = "format", required = true) String format,@RequestParam String country) {
+    public ResponseEntity<Object> getMfrByCountry(@RequestParam(value = "format", required = true) String format, @RequestParam String country) {
         try {
             return new ResponseEntity<>(manufacturers.getByCountry(country,format), HttpStatus.OK);
         } catch(Exception e) {
