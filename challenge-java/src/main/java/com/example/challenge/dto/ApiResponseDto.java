@@ -1,18 +1,19 @@
-package dto;
+package com.example.challenge.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class ApiResponseDto {
-
+    @JsonProperty("Count")
     private int count;
 
-
+    @JsonProperty("Message")
     private String message;
 
-
+    @JsonProperty("SearchCriteria")
     private String searchCriteria;
-
-
+    @JsonProperty("Results")
     private List<MfrDto> results;
 
     public int getCount() {

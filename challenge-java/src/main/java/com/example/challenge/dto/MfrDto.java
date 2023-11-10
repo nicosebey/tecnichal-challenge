@@ -1,14 +1,20 @@
-package dto;
+package com.example.challenge.dto;
 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class MfrDto {
+    @JsonProperty("Mfr_ID")
     private Integer id;
+    @JsonProperty("Country")
     private String country;
+    @JsonProperty("Mfr_CommonName")
     private String commonName;
+    @JsonProperty("Mfr_Name")
     private String name;
-
+    @JsonProperty("VehicleTypes")
     private List<VehiclesTypeDto> vehicles;
 
     public void setVehicles(List<VehiclesTypeDto> vehicles){
@@ -16,7 +22,7 @@ public class MfrDto {
     }
 
     public List<VehiclesTypeDto> getVehicles(){
-        return this.vehicles;
+        return vehicles;
     }
 
     public Integer getId() {

@@ -1,4 +1,4 @@
-package model;
+package com.example.challenge.model;
 
 
 public class Mfr {

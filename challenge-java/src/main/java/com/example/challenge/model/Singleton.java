@@ -1,10 +1,7 @@
-package model;
+package com.example.challenge.model;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import dto.ApiResponseDto;
-import dto.MfrDto;
-import org.springframework.http.ResponseEntity;
+import com.example.challenge.dto.MfrDto;
+import com.example.challenge.dto.ApiResponseDto;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -21,8 +18,9 @@ public class Singleton {
         if(manufacturers == null ) {
             INSTANCE = new Singleton();
             RestTemplate restTemplate = new RestTemplate();
-            ResponseEntity<ApiResponseDto> response = restTemplate.getForEntity(url + format, ApiResponseDto.class);
-            INSTANCE.setManufacturers(response.getBody().getResults());
+            ApiResponseDto response = restTemplate.getForObject(url + format, ApiResponseDto.class);
+            INSTANCE.setManufacturers(response.getResults());
+            //INSTANCE.setManufacturers(INSTANCE);
         }
         return INSTANCE;
     }
